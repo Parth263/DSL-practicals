@@ -70,3 +70,29 @@ def Main() :
 
 
 Main()
+
+
+
+
+# Linear search and sentinel search are both algorithms used to find the position of a target element within a list or array.
+
+# 1. **Linear Search:**
+#    - **Description:** Linear search, also known as sequential search, is a simple method of finding a target element within a list. It checks each element in the list one by one until a match is found or the entire list has been searched.
+#    - **Algorithm:**
+#      1. Start from the beginning of the list.
+#      2. Compare each element with the target element.
+#      3. If a match is found, return the index of the element; otherwise, continue searching.
+#      4. If the end of the list is reached without finding a match, return a special value (e.g., -1) to indicate that the target element is not in the list.
+#    - **Time Complexity:** O(n), where n is the number of elements in the list.
+
+# 2. **Sentinel Search:**
+#    - **Description:** Sentinel search is an optimization of the linear search algorithm. In this approach, a sentinel (a special value) is placed at the end of the list. This eliminates the need to check for the end of the list during each iteration.
+#    - **Algorithm:**
+#      1. Place a sentinel value at the end of the list (e.g., set the last element to the target value).
+#      2. Start from the beginning of the list.
+#      3. Compare each element with the target element.
+#      4. If a match is found, return the index of the element; otherwise, continue searching.
+#      5. Since the sentinel value is guaranteed to be found, there's no need to explicitly check for the end of the list.
+#    - **Time Complexity:** O(n), same as linear search, but with a slight constant factor improvement.
+
+# While sentinel search can provide a small performance improvement over a basic linear search, it may not be as significant for small lists. For larger lists or when the cost of comparisons is high, more advanced algorithms like binary search on a sorted list may be preferred.
