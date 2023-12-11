@@ -117,4 +117,4 @@ return 0;
 // Orders are served in the order they were placed.
 // The program lacks a method to dequeue or remove served orders from the queue. As a result, once 5 orders are placed, no new orders can be added, and served orders are not cleared.
 // Summary
-// The program demonstrates the basic principles of a circular queue using an array in C++. It's a simple model for understanding how circular queues can be used in practical applications like order management systems. However, for a complete implementation, dequeue functionality should be added to remove served orders from the queue.
+// The program demonstrates the b asic principles of a circular queue using an array in C++. It's a simple model for understanding how circular queues can be used in practical applications like order management systems. However, for a complete implementation, dequeue functionality should be added to remove served orders from the queue.
