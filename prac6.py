@@ -117,3 +117,29 @@ def Main() :
 
 
 Main()
+
+
+
+
+
+# Binary Search
+# Binary Search is an efficient algorithm for finding an item from a sorted list of items. It works by repeatedly dividing in half the portion of the list that could contain the item, until you've narrowed down the possible locations to just one.
+
+# Iterative Binary Search:
+# This approach uses a loop to divide the search interval in half.
+# You keep track of the search interval with two indices (start and end).
+# In each iteration, you compare the middle element of the interval with the target value. If they match, you've found the item.
+# If the target is smaller, you adjust the end index; if larger, you adjust the start index.
+# The loop continues until the item is found or the interval is empty.
+# Recursive Binary Search:
+# This approach uses the same divide-and-conquer strategy but implements it using recursion.
+# The function calls itself with a new half of the original list based on whether the target would be in the left or right half.
+# The base case occurs when the start index is greater than the end index, indicating the item isn't in the list.
+# Fibonacci Search
+# Fibonacci Search is another divide-and-conquer algorithm that divides the search space using Fibonacci numbers. It is a method of searching a sorted array using a divide and conquer algorithm that narrows down possible locations with the aid of Fibonacci numbers.
+
+# It uses Fibonacci numbers to identify the indexes to be compared and to split the array.
+# Initially, the largest Fibonacci number smaller than or equal to the array size is chosen.
+# The array is divided into two parts that are proportional to consecutive Fibonacci numbers.
+# It then follows a similar process to binary search, adjusting the search interval based on the comparison but uses Fibonacci numbers to determine the index of the next element to compare.
+# This search can be particularly efficient when the size of the array is close to a Fibonacci number.

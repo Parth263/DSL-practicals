@@ -75,3 +75,14 @@ def Main() :
 
 
 Main()
+
+
+
+
+
+# Selection Sort Algorithm:
+# Selection_sort is a simple sorting algorithm that builds the sorted array (or list) one item at a time. It repeatedly selects the smallest (or largest) element from the unsorted portion and moves it to the end (or beginning) of the sorted portion.
+# This algorithm is not very efficient on large lists but is simple and has performance advantages over more complicated algorithms in certain situations.
+# Bubble Sort Algorithm:
+# Bubble_sort is another simple sorting algorithm. It repeatedly steps through the list, compares adjacent elements, and swaps them if necessary. Each pass through the list places the next largest (or smallest) value in its proper place.
+# Like selection sort, bubble sort is not efficient for large datasets but is conceptually simple.

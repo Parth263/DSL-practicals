@@ -104,3 +104,29 @@ def main():
          print ("Wrong choice entered !! Try again")
 
 main()
+
+# n Python, a list is a built-in data type used to store collections of items. Lists are:
+
+# Ordered: The order of items is maintained.
+# Mutable: You can modify a list after its creation.
+# Heterogeneous: Lists can contain items of different data types.
+# Built-in Functions and Methods for Lists
+# Built-in Functions
+
+# len(list): Returns the number of items in the list.
+# max(list): Returns the largest item in the list (items must be comparable).
+# min(list): Returns the smallest item in the list (items must be comparable).
+# sum(list): Returns the sum of the elements in the list (elements must be numbers).
+# sorted(list): Returns a new sorted list from the elements of the original list.
+# List Methods
+
+# list.append(x): Adds an item x to the end of the list.
+# list.insert(i, x): Inserts an item x at a given position i.
+# list.remove(x): Removes the first item x from the list.
+# list.pop([i]): Removes the item at the given position i and returns it. If no index is specified, pop() removes and returns the last item.
+# list.clear(): Removes all items from the list.
+# list.index(x[, start[, end]]): Returns the index of the first occurrence of x.
+# list.count(x): Returns the number of times x appears in the list.
+# list.sort(key=None, reverse=False): Sorts the items of the list in place (the arguments can be used for sort customization).
+# list.reverse(): Reverses the elements of the list in place.
+# list.copy(): Returns a shallow copy of the list.

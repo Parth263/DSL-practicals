@@ -157,3 +157,48 @@ using namespace std;
      }
      return (0);
  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  Struct Definition: stack
+// Defines a stack structure with:
+// data[MAX]: An array of char to store the stack elements.
+// top: An integer to track the top of the stack.
+// Functions Defined
+// init(stack *stck): Initializes the stack by setting all elements to \0 and top to -1.
+// print(stack stck): Prints the elements of the stack and the current top index (though, there's a mistake in the print statement).
+// isempty(stack stck): Returns 1 (true) if the stack is empty, 0 (false) otherwise.
+// isfull(stack stck): Returns 1 (true) if the stack is full, 0 (false) otherwise.
+// push(stack *stck, char data[MAX]): Pushes a string onto the stack.
+// push1(stack *stck, char data[MAX]): Similar to push, but it ignores spaces.
+// pop(stack *stck): Pops elements from the stack to form a reversed string, checks if the reversed string is the same as the original (palindrome check).
+// Main Function
+// Stack and String Initialization:
+// A stack object stck and a char array data are created. data is initialized with a specific string.
+// Menu-Driven Interface:
+// The user is presented with options to push the string onto the stack, check for palindrome, and exit.
+// Case 1:
+// Pushes the string onto the stack and then pops it to check if it's a palindrome.
+// Case 2:
+// First, spaces are removed from data, and uppercase letters are converted to lowercase.
+// Then, the modified string is pushed onto the stack and checked for palindrome.
+// Code Analysis and Issues
+// The print function is not correctly implemented. cout << "stck.data[i]" should be cout << stck.data[i].
+// There's no input to change ch inside the loop in main(), so it might result in an infinite loop.
+// The pop function compares the reversed string with the original incorrectly. It should compare with a copy of the original, as the stack's data array is altered during the pop operation.
+// The program uses global variable MAX to define the stack size. It's a common practice to use constants for fixed sizes, but it lacks flexibility.
+// The stack implementation is basic and tailored to the specific needs of this program (like palindrome checking). It's not a general-purpose stack.

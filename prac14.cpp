@@ -1,69 +1,102 @@
 #include <iostream>
 #define MAX 5
 using namespace std;
-struct queue
-{       int data[MAX];
-int front,rear;
+
+struct queue {
+    int data[MAX];
+    int front, rear;
 };
-class Queue
-{    struct queue q;
-   public:
-      Queue(){q.front=q.rear=-1;}
-      int isempty();
-      int isfull();
-      void enqueue(int);
-      int delqueue();
-      void display();
+
+class Queue {
+    struct queue q;
+public:
+    Queue() {
+        q.front = 0;
+        q.rear = -1;
+    }
+    bool isempty();
+    bool isfull();
+    void enqueue(int);
+    int delqueue();
+    void display();
 };
-int Queue::isempty()
-{
-return(q.front==q.rear)?1:0;
+
+bool Queue::isempty() {
+    return q.front == (q.rear + 1) % MAX;
 }
-int Queue::isfull()
-{    return(q.rear==MAX-1)?1:0;}
-void Queue::enqueue(int x)
-{q.data[++q.rear]=x;}
-int Queue::delqueue()
-{return q.data[++q.front];}
-void Queue::display()
-{   int i;
-    cout<<"\n";
-    for(i=q.front+1;i<=q.rear;i++)
-    cout<<q.data[i]<<" ";
+
+bool Queue::isfull() {
+    return q.front == (q.rear + 2) % MAX;
 }
-int main()
-{      Queue obj;
-int ch,x;
-do{    cout<<"\n 1. insert job\n 2.delete job\n 3.display\n 4.Exit\n Enter your choice:";
-      cin>>ch;
-switch(ch)
-{  case 1: if (!obj.isfull())
-  {   cout<<"\n Enter data:";
-cin>>x;
-obj.enqueue(x);
-  }
-         else
-     cout<< "Queue is overflow";
-          break;
-  case 2: if(!obj.isempty())
-   cout<<"\n Deleted Element="<<obj.delqueue();
-   else
-{   cout<<"\n Queue is underflow";  }
-   cout<<"\nremaining jobs :";
-   obj.display();
-          break;
- case 3: if (!obj.isempty())
-       {  cout<<"\n Queue contains:";
-      obj.display();
-       }
-       else
-        cout<<"\n Queue is empty";
-      break;
- case 4: cout<<"\n Exit";
+
+void Queue::enqueue(int x) {
+    if (!isfull()) {
+        q.rear = (q.rear + 1) % MAX;
+        q.data[q.rear] = x;
+    } else {
+        cout << "\nQueue is overflow";
+    }
+}
+
+int Queue::delqueue() {
+    if (!isempty()) {
+        int x = q.data[q.front];
+        q.front = (q.front + 1) % MAX;
+        return x;
+    } else {
+        cout << "\nQueue is underflow";
+        return -1; // Indicating underflow
+    }
+}
+
+void Queue::display() {
+    cout << "\n";
+    if (!isempty()) {
+        int i = q.front;
+        while (i != q.rear) {
+            cout << q.data[i] << " ";
+            i = (i + 1) % MAX;
         }
-      }while(ch!=4);
-return 0;
+        cout << q.data[i]; // Displaying the last element
+    } else {
+        cout << "Queue is empty";
+    }
 }
+
+int main() {
+    Queue obj;
+    int ch, x;
+    do {
+        cout << "\n1. Insert job\n2. Delete job\n3. Display\n4. Exit\nEnter your choice: ";
+        cin >> ch;
+        switch (ch) {
+            case 1:
+                cout << "\nEnter data: ";
+                cin >> x;
+                obj.enqueue(x);
+                break;
+            case 2:
+                x = obj.delqueue();
+                if (x != -1) {
+                    cout << "\nDeleted Element = " << x;
+                }
+                cout << "\nRemaining jobs: ";
+                obj.display();
+                break;
+            case 3:
+                cout << "\nQueue contains: ";
+                obj.display();
+                break;
+            case 4:
+                cout << "\nExit";
+                break;
+            default:
+                cout << "\nUnknown choice";
+        }
+    } while (ch != 4);
+    return 0;
+}
+
 
 
 

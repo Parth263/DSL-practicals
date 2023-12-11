@@ -1,4 +1,4 @@
-def accept_array(A): 
+def accept_array(A):  #list A
    n = int(input("Enter the total no. of student : "))
    for i in range(n):
       x = int(input("Enter the  roll no of student %d : "%(i+1)))

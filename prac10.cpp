@@ -271,3 +271,33 @@ int main()
 
 return 0;
 }
+
+
+
+
+
+// Class info
+// This class manages the student information. It contains several linked lists and operations to manipulate these lists. Each list head is represented by head1, head2, head3, etc.
+
+// Struct node
+// Defines the structure of a node in the linked list, containing:
+
+// roll: An integer storing the student's roll number.
+// next: A pointer to the next node in the list.
+// Member Functions of info
+// create(): Creates a new node with the student's roll number and returns a pointer to it.
+// insert(): Inserts a new node at the end of the current list (pointed to by head).
+// display(): Displays all the roll numbers in the current list.
+// allstud(): Manages the list of all students. Students are inserted and then displayed.
+// vanila(): Manages the list of students who like vanilla. Similar to allstud, but for vanilla preference.
+// butters(): Manages the list of students who like butterscotch.
+// uice(): Displays students who like either vanilla or butterscotch. This involves merging the vanilla and butterscotch lists and handling duplicates.
+// ovanila(): Displays students who like only vanilla (not butterscotch).
+// obutters(): Displays students who like only butterscotch (not vanilla).
+// nice(): Displays students who like both vanilla and butterscotch.
+// notice(): Displays students who don't like either vanilla or butterscotch.
+// Concepts Behind the Code
+// Singly Linked List: The program uses singly linked lists to store and manage data. Each list is independent, representing different groups (e.g., students liking vanilla, butterscotch, both, or neither).
+// List Operations: Various standard operations like insertion at the end, traversing, and displaying the list are implemented. Additional operations to combine and filter lists based on student preferences are also present.
+// Handling Duplicates and Merging Lists: The functions uice, ovanila, obutters, nice, and notice involve merging lists and handling duplicates to satisfy specific conditions (like students liking both flavors or neither).
+// User Interaction: The main function provides an interactive menu-driven interface to choose different operations.

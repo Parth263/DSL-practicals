@@ -372,3 +372,31 @@ cout<<"\n========== GOOD BYE ====================\n";
 	
 	return 0;
 }
+
+
+
+// Class node
+// Represents a node in the linked list.
+// Contains three members:
+// prn: An integer to store the PRN (Permanent Registration Number) of a student.
+// name: A string to store the name of the student.
+// next: A pointer to the next node in the list.
+// Has a constructor to initialize prn, name, and set next to NULL.
+// Class list
+// Represents the linked list itself.
+// Contains a single member start, which is a pointer to the first node in the list.
+// Provides several member functions to manipulate the linked list, including creating the list, inserting elements, deleting elements, displaying the list, etc.
+// Member Functions of list
+// create(): Initializes the list with the first node. If the list is already created, it indicates so.
+// display(): Traverses the list from the start and displays the PRN and name of each node.
+// insertAtBeginning(): Inserts a new node at the beginning (head) of the list.
+// insertAtEnd(): Inserts a new node at the end of the list.
+// insertAfter(): Inserts a new node after a node with a given PRN.
+// deleteAtFirst(): Deletes the first node (head) of the list.
+// deleteByValue(): Deletes a node based on its PRN value.
+// deleteAtEnd(): Deletes the last node of the list.
+// computeTotal(): Computes and returns the total number of nodes in the list.
+// sortList(): Sorts the list based on PRN numbers using the Bubble Sort algorithm.
+// concatList(list &q1): Concatenates another list q1 to the end of the current list.
+// displayRev(node *t): A recursive function to display the list in reverse order.
+// reverseDisplay(): A helper function to initiate the reverse display process.

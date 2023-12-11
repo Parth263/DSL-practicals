@@ -104,3 +104,47 @@ int main() {
    while(c != 4);
    return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+// Code Explanation
+// Structure Definition: n
+
+// Defines a node structure n1 with three members:
+// p: An integer to store the priority of the node.
+// info: An integer to store the actual value or information of the node.
+// l: A pointer to the next node in the list.
+// Class Definition: Priority_Queue
+
+// Encapsulates the operations of a priority queue.
+// Constructor
+// Initializes the f (front) pointer to NULL.
+// Function: insert(int i, int p)
+// Inserts a new node with value i and priority p.
+// If the queue is empty or the new node's priority is higher than the front node's priority, the new node is added at the beginning.
+// Otherwise, it finds the correct position and inserts the node based on its priority.
+// Function: del()
+// Deletes the node from the front of the queue (the node with the highest priority).
+// Prints the deleted item's value.
+// Handles the case when the queue is empty.
+// Function: show()
+// Displays the elements of the priority queue along with their priorities.
+// If the queue is empty, it prints a message.
+// Main Function
+
+// Provides an interactive interface to the user with options to perform enqueue (insert), dequeue (delete), display the queue, or exit the application.
+// The user can insert elements with a specified priority. The program then places these elements in the correct position in the queue based on their priority.
+// Switch Cases in main()
+// Case 1 - Insert: User inputs a value and its priority, which are then inserted into the queue.
+// Case 2 - Delete: Deletes the element from the front of the queue (the highest priority element).
+// Case 3 - Display: Shows the elements in the queue along with their priorities.
+// Case 4 - Exit: Exits the loop and ends the program.
